@@ -328,6 +328,7 @@
           break;
 
         case 40: // down arrow
+          if(e.type === 'keypress') break;   // 40 is open paren inside a keypress. This might be the same fix twice but hey ho.
           // with the shiftKey (this is actually the right parenthesis)
           if (e.shiftKey) return;
           e.preventDefault();
