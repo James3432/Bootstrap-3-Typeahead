@@ -81,6 +81,7 @@
           .val(this.displayText(newVal) || newVal)
           .change();
         this.afterSelect(newVal);
+        $('.bootstrap-tagsinput input').val(''); // HACK to make it work with bootstrap-tagsinput
       }
       return this.hide();
     },
